@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact NeonCam ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="y2k-bg">
+
+<header class="header-y2k">
+  <h1 class="logo-y2k sparkle-title">♡ Contact NeonCam ♡</h1>
+  <nav class="nav-bar">
+  <a class="nav-btn" href="index.html">Home ♡</a>
+  <a class="nav-btn" href="products.html">Shop ✧</a>
+  <a class="nav-btn" href="cart.html">Cart 🛒</a>
+  <a class="nav-btn" href="contact.html">Contact 💌</a>
+  <a class="nav-btn" href="about.html">About ✨</a>
+</nav>
+
+</header>
+
+<div class="floating-stars"></div>
+
+<main>
+  <section class="contact-box kawaii-border">
+    <h2>💌 Send Us a Message 💌</h2>
+    <p>We love hearing from our cute creators! Fill in the form below and we'll sparkle back soon ✨</p>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name ♡" required>
+      <input type="email" name="email" placeholder="Your Email ✧" required>
+      <input type="text" name="subject" placeholder="Subject 🎀" required>
+      <textarea name="message" rows="5" placeholder="Your Message ♡" required></textarea>
+      <button type="submit" class="btn-y2k-big">Send Message ✨</button>
+    </form>
+
+    <p id="form-feedback" style="margin-top:12px;color:#d048a9;"></p>
+  </section>
+  <!-- ================= NEWSLETTER / DISCOUNT POPUP ================= -->
+<button class="discount-bubble" onclick="openDiscount()">💌 Free Discount!</button>
+
+<div id="discount-popup" class="popup-wrapper">
+  <div class="popup-box kawaii-border">
+    <h3>✨ Claim Your 10% Discount ✨</h3>
+    <p>Enter your email to get a sweet sparkly coupon ♡</p>
+    <input type="email" id="discount-email" placeholder="yourname@cute.com">
+    <button class="btn-y2k-big" onclick="submitDiscount()">Claim 💖</button>
+    <button class="close-btn" onclick="closeDiscount()">✦ Close ✦</button>
+  </div>
+</div>
+</main>
+
+<footer class="footer-y2k">
+  ✧ NeonCam © 2025 ✧
+</footer>
+
+<script>
+  // Cute form submission animation
+  const form = document.getElementById('contact-form');
+  const feedback = document.getElementById('form-feedback');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    feedback.textContent = "💖 Thank you! Your message has been sent! 💖";
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

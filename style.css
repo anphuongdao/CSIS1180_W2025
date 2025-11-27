@@ -1,0 +1,564 @@
+/* ---------------------------------------------------
+   💖 Base styles (kept from previous version)
+--------------------------------------------------- */
+
+body.y2k-bg {
+  background: linear-gradient(135deg, #ffe6f5, #ffc8f0, #fbcaff, #e7d4ff);
+  background-size: 400% 400%;
+  animation: bgFlow 14s ease-in-out infinite;
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #c559a0;
+}
+
+@keyframes bgFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ---------------------------------------------------
+   💖 Header + Navigation
+--------------------------------------------------- */
+
+.header-y2k {
+  text-align: center;
+  padding: 35px;
+  background: #ffb7e7;
+  border-bottom: 5px solid #ffa1de;
+  box-shadow: 0 2px 12px #ff9ed3;
+}
+
+.logo-y2k {
+  font-family: "Courier New", monospace;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px #ffe2f7, 0px 0px 18px #ff78d1;
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.nav-bar {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  background: #ffdbf4;
+  border: 3px solid #ff9ddd;
+  border-radius: 12px;
+  margin: 0 8px;
+  text-decoration: none;
+  color: #d048a9;
+  font-weight: bold;
+  box-shadow: 0 0 8px #ffc8f1;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #ffe9fa;
+  color: #ff5ecf;
+  box-shadow: 0 0 14px #ffbbed;
+}
+
+/* ---------------------------------------------------
+   💖 Floating Stars Effect
+--------------------------------------------------- */
+
+.floating-stars::before,
+.floating-stars::after {
+  content: "✧ ✦ ✧ ✦ ✧";
+  font-size: 1.6rem;
+  position: fixed;
+  color: #ffe6ff;
+  animation: floatStars 6s linear infinite;
+  opacity: 0.7;
+  left: 10%;
+}
+
+@keyframes floatStars {
+  0% { top: 110%; }
+  50% { top: 50%; }
+  100% { top: -20%; }
+}
+
+/* ---------------------------------------------------
+   💖 Featured Product Section
+--------------------------------------------------- */
+
+.featured-box {
+  width: 75%;
+  margin: 40px auto;
+  background: #fff0fb;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 16px #ffcdf4;
+  text-align: center;
+}
+
+.featured-inner {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.featured-inner img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 0 14px #ffbfee;
+}
+
+.featured-title {
+  font-size: 1.6rem;
+  color: #ff4fae;
+}
+
+.featured-desc {
+  color: #c256a8;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------------------------------
+   💖 Discount Email Popup
+--------------------------------------------------- */
+
+.discount-bubble {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #ffbdf4;
+  border: 4px solid #ff8bdd;
+  border-radius: 50%;
+  padding: 18px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 12px #ff9ae3;
+  transition: 0.2s;
+}
+
+.discount-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 16px #ff7ddb;
+}
+
+/* Popup wrapper (dim background) */
+.popup-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 204, 240, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup box */
+.popup-box {
+  background: #fff2fc;
+  padding: 30px;
+  width: 320px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 0 14px #ffbff0;
+}
+
+.popup-box input {
+  width: 85%;
+  padding: 10px;
+  border: 3px solid #ffa6e2;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #fff8fd;
+  color: #c24693;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background: #ffc7f2;
+  border: 2px solid #ff9be5;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   💖 Product Grid With Hover Glow + Bounce
+--------------------------------------------------- */
+
+.product-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 0 12px #ffc2f5;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 22px #ff9be4;
+}
+
+/* ---------------------------------------------------
+   💖 Heart Animation After Add-To-Cart
+--------------------------------------------------- */
+
+.heart-burst {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: heartFloat 1.2s ease forwards;
+  color: #ff70c7;
+  text-shadow: 0 0 10px #ffb8ea;
+}
+
+@keyframes heartFloat {
+  0% {opacity: 1; transform: translateY(0);}
+  100% {opacity: 0; transform: translateY(-80px);}
+}
+
+/* ---------------------------------------------------
+   💖 Social Media Section
+--------------------------------------------------- */
+
+.social-box {
+  margin: 50px auto;
+  padding: 35px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-btn {
+  padding: 12px 20px;
+  background: #ffd7f7;
+  border: 3px solid #ffa4e6;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #c240a4;
+  font-weight: bold;
+  box-shadow: 0 0 12px #ffcaf3;
+  transition: 0.2s;
+}
+
+.social-btn:hover {
+  background: #ffe7fb;
+  box-shadow: 0 0 18px #ffb4ef;
+}
+
+/* ---------------------------------------------------
+   💖 Cute Border Reuse
+--------------------------------------------------- */
+
+.kawaii-border {
+  border: 4px dotted #ffb1e7;
+  padding: 12px;
+  border-radius: 18px;
+}
+/* -----------------------------
+   🌸 Fixed Product Grid
+----------------------------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+/* -----------------------------
+   🌸 Fixed Product Cards
+----------------------------- */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 12px #ffc2f5;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 180px;  /* prevents cards from stretching */
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Optional: make hover bounce smaller so it doesn’t overlap */
+.product-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 18px #ff9be4;
+}
+/* ------------------ HERO SECTION ------------------ */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffe6f5;
+  border: 4px dotted #ffb1e7;
+  border-radius: 22px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 0 18px #ffb8f0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #ff4fae;
+  text-shadow: 0 0 8px #ffc8f1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #c256a8;
+  margin: 15px 0 25px 0;
+}
+
+/* ------------------ ARTICLES SECTION ------------------ */
+.articles-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #ff4fae;
+  text-shadow: 0 0 8px #ffc8f1;
+  margin-bottom: 30px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.article-card {
+  background: #fff0fb;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px #ffb7f0;
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 22px #ff9be4;
+}
+
+.article-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.read-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #ffd7f7;
+  border: 3px solid #ffa4e6;
+  border-radius: 12px;
+  color: #c240a4;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.read-btn:hover {
+  background: #ffe7fb;
+  box-shadow: 0 0 16px #ffb4ef;
+}
+/* ------------------ Y2K Big Buttons ------------------ */
+.btn-y2k-big {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ffb7e7;
+  border: 3px solid #ff9ddb;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d048a9;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ffc8f1;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-y2k-big:hover {
+  background: #ffe9fa;
+  color: #ff5ecf;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #ffbbee;
+}
+
+/* ------------------ Read More Buttons ------------------ */
+.read-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffd7f7;
+  border: 3px solid #ffa4e6;
+  border-radius: 16px;
+  font-weight: bold;
+  color: #c240a4;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ffcaf3;
+  transition: all 0.2s ease-in-out;
+}
+
+.read-btn:hover {
+  background: #ffe7fb;
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #ffb4ef;
+}
+
+/* ------------------ Discount Bubble Button ------------------ */
+.discount-bubble {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #ffbdf4;
+  border: 4px solid #ff8bdd;
+  border-radius: 50%;
+  padding: 18px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ff9ae3;
+  transition: all 0.2s ease-in-out;
+}
+
+.discount-bubble:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #ff7ddb;
+}
+/* ------------------ Contact Form Styling ------------------ */
+.contact-box {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff0fb;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 14px #ffbff0;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 85%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 3px solid #ffa6e2;
+  border-radius: 14px;
+  background: #fff8fd;
+  color: #c24693;
+  font-size: 1rem;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: #ff5ecf;
+  box-shadow: 0 0 12px #ffbbee;
+}
+/* ------------------ Featured Product Fix ------------------ */
+.featured-box {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff0fb;
+  padding: 25px 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 16px #ffcdf4;
+  text-align: center;
+}
+
+.featured-inner {
+  display: flex;
+  flex-wrap: wrap; /* allows responsiveness */
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.featured-inner img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 14px #ffbfee;
+}
+
+.featured-title {
+  font-size: 1.6rem;
+  color: #ff4fae;
+  margin-bottom: 10px;
+}
+
+.featured-desc {
+  color: #c256a8;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.btn-y2k-big {
+  margin-top: 12px;
+}
+/* ------------------ About Page ------------------ */
+.about-box {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff0fb;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 16px #ffcdf4;
+  text-align: left;
+}
+
+.about-box h2, .about-box h3 {
+  color: #ff4fae;
+  text-align: center;
+}
+
+.about-box p, .about-box li {
+  color: #c256a8;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.about-box ul {
+  list-style: "✨ ";
+  padding-left: 20px;
+}

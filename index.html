@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeonCam ♡ Cute Cameras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="y2k-bg">
+
+<!-- ================= HEADER ================= -->
+<header class="header-y2k">
+  <h1 class="logo-y2k sparkle-title">♡ NeonCam ♡</h1>
+ <nav class="nav-bar">
+  <a class="nav-btn" href="index.html">Home ♡</a>
+  <a class="nav-btn" href="products.html">Shop ✧</a>
+  <a class="nav-btn" href="cart.html">Cart 🛒</a>
+  <a class="nav-btn" href="contact.html">Contact 💌</a>
+  <a class="nav-btn" href="about.html">About ✨</a>
+</nav>
+</header>
+
+<div class="floating-stars"></div>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero-section kawaii-border">
+  <h2 class="hero-title">Welcome to NeonCam ✨</h2>
+  <p class="hero-subtitle">Your portal to the cutest digital cameras + sparkly photography tips ♡</p>
+  <a href="products.html" class="btn-y2k-big">Shop Now 💖</a>
+</section>
+
+<!-- ================= FEATURED CAMERA ================= -->
+<section class="featured-box kawaii-border">
+  <h2 class="section-title">💖 Featured Camera of the Week 💖</h2>
+  <div class="featured-inner">
+    <img src="https://www.sony.com/image/710a83a2d82ce8e30543b68b7e5a0c44?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF" alt="Sony RX100 V">
+    <div>
+      <h3 class="featured-title">Sony RX100 V ✧</h3>
+      <p class="featured-desc">Chosen for its magical clarity + compact kawaii charm ✨<br>
+         Perfect for selfies, aesthetic vlogs, & sparkly edits ♡</p>
+      <button class="btn-y2k-big" onclick="addToCart('Sony RX100 V', 949)">Add Featured Item ♡</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARTICLES / TIPS ================= -->
+<section class="articles-section">
+  <h2 class="section-title">♡ Photography Fun & Tips ♡</h2>
+  <div class="articles-grid">
+    <div class="article-card kawaii-border">
+      <img src="https://i.pinimg.com/originals/4c/9e/49/4c9e49cbc1dcc674981c535e8ced0c9e.jpg" alt="Vlog Cameras">
+      <h3>Top 5 Cameras for Your Aesthetic Vlog</h3>
+      <p>Find the cutest cameras perfect for pastel vlogs and Instagram reels ✧</p>
+      <a href="#" class="read-btn">Read More 💖</a>
+    </div>
+    <div class="article-card kawaii-border">
+      <img src="https://i.pinimg.com/736x/28/a3/ed/28a3ed7a0960599cccef29b64119baf1.jpg" alt="Pastel Photos">
+      <h3>How to Take Dreamy Pastel Photos</h3>
+      <p>Learn tricks to capture soft, dreamy, Y2K-style photos in any lighting ♡</p>
+      <a href="#" class="read-btn">Read More 🎀</a>
+    </div>
+    <div class="article-card kawaii-border">
+      <img src="https://i.pinimg.com/originals/de/fd/63/defd6320ac84e756f6741325a2ebc5c1.jpg" alt="Y2K Tips">
+      <h3>Y2K Photography Tips for Beginners</h3>
+      <p>Step into the world of retro aesthetics with easy tips for your camera ✧</p>
+      <a href="#" class="read-btn">Read More 💌</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER / DISCOUNT POPUP ================= -->
+<button class="discount-bubble" onclick="openDiscount()">💌 Free Discount!</button>
+
+<div id="discount-popup" class="popup-wrapper">
+  <div class="popup-box kawaii-border">
+    <h3>✨ Claim Your 10% Discount ✨</h3>
+    <p>Enter your email to get a sweet sparkly coupon ♡</p>
+    <input type="email" id="discount-email" placeholder="yourname@cute.com">
+    <button class="btn-y2k-big" onclick="submitDiscount()">Claim 💖</button>
+    <button class="close-btn" onclick="closeDiscount()">✦ Close ✦</button>
+  </div>
+</div>
+
+<!-- ================= SOCIAL MEDIA ================= -->
+<section class="social-box">
+  <h2>💕 Follow NeonCam for Sparkly Updates 💕</h2>
+  <div class="social-icons">
+    <a href="#" class="social-btn">🌐 Website</a>
+    <a href="#" class="social-btn">📸 Instagram</a>
+    <a href="#" class="social-btn">🎵 TikTok</a>
+    <a href="#" class="social-btn">📌 Pinterest</a>
+  </div>
+</section>
+
+<footer class="footer-y2k">
+  ✧ NeonCam © 2025 ✧
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

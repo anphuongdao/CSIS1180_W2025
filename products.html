@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cute Cameras ♡ NeonCam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="y2k-bg">
+
+<header class="header-y2k">
+  <h1 class="logo-y2k sparkle-title">♡ Cute Camera Shop ♡</h1>
+  <nav class="nav-bar">
+  <a class="nav-btn" href="index.html">Home ♡</a>
+  <a class="nav-btn" href="products.html">Shop ✧</a>
+  <a class="nav-btn" href="cart.html">Cart 🛒</a>
+  <a class="nav-btn" href="contact.html">Contact 💌</a>
+  <a class="nav-btn" href="about.html">About ✨</a>
+</nav>
+
+</header>
+
+<div class="floating-stars"></div>
+
+<main>
+
+  <div class="product-grid">
+    
+    <!-- PRODUCT CARD TEMPLATE -->
+    <div class="product-card kawaii-border">
+      <img src="https://images-us-prod.cms.commerce.dynamics.com/cms/api/hbzzfqllpg/imageFileData/search?fileName=/
+      Products%2F566CAN447_000_001.png&fallback=/Products/V566CAN447_000_001.jpg,/Products/V566CAN447_000_001.png,/Products/V566CAN447_000_001.webp&m=6" alt="">
+      <h3>Canon PowerShot G7 X Mark III ✧</h3>
+      <p class="desc">Perfect for sweet vlogs + aesthetic selfies ♡</p>
+      <p class="price">$749</p>
+      <button class="btn-add" onclick="addToCart('Canon PowerShot G7 X Mark III', 749)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://excellentphoto.ca/cdn/shop/products/a6400-selp1650-front-black_00acc478-a4b1-4179-8728-b6ef539eee3f.jpg?
+      v=1585765256&width=500">
+      <h3>Sony a6400 🎀</h3>
+      <p class="desc">Crisp, cute, perfect for sparkly edits ✧</p>
+      <p class="price">$999</p>
+      <button class="btn-add" onclick="addToCart('Sony a6400', 999)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://images-us-prod.cms.commerce.dynamics.com/cms/api/hbzzfqllpg/imageFileData/search?fileName=/Products%2F567FUJ128_000_001.png&fallback=/
+      Products/V567FUJ128_000_001.jpg,/Products/V567FUJ128_000_001.png,/Products/V567FUJ128_000_001.webp&m=6">
+      <h3>Fujifilm X-T30 🎀</h3>
+      <p class="desc">Shoujo manga colors IRL ♡</p>
+      <p class="price">$899</p>
+      <button class="btn-add" onclick="addToCart('Fujifilm X-T30', 899)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://cvp.com/images/products/altimage/13-10-20151444748065powershot-g9x-silver-image-1.jpg">
+      <h3>Canon G9 X Mk II ✧</h3>
+      <p class="desc">Small, cute, fits in pastel purses 🎀</p>
+      <p class="price">$529</p>
+      <button class="btn-add" onclick="addToCart('Canon G9 X Mk II', 529)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://www.zoomcamera.net/wp-content/uploads/2019/09/Panasonic-G95-Body-02.jpg">
+      <h3>Lumix G95 ♡</h3>
+      <p class="desc">Soft, dreamy tones for creators</p>
+      <p class="price">$799</p>
+      <button class="btn-add" onclick="addToCart('Lumix G95', 799)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://m.media-amazon.com/images/I/71FtJkfogQL.jpg">
+      <h3>Olympus E-M10 Mk III ✧</h3>
+      <p class="desc">Pastel-friendly film simulations 🎀</p>
+      <p class="price">$649</p>
+      <button class="btn-add" onclick="addToCart('Olympus E-M10 Mk III', 649)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://www.sony.com/image/710a83a2d82ce8e30543b68b7e5a0c44?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF">
+      <h3>Sony RX100 V ✧</h3>
+      <p class="desc">Compact powerhouse for cute adventures ♡</p>
+      <p class="price">$949</p>
+      <button class="btn-add" onclick="addToCart('Sony RX100 V', 949)">Add to Cart ♡</button>
+    </div>
+
+    <div class="product-card kawaii-border">
+      <img src="https://www.mcbaincamera.com/_images/0240511.jpg">
+      <h3>Nikon Z50 🎀</h3>
+      <p class="desc">Bright + colorful for happy memories ✧</p>
+      <p class="price">$878</p>
+      <button class="btn-add" onclick="addToCart('Nikon Z50', 878)">Add to Cart ♡</button>
+    </div>
+    <!-- ================= NEWSLETTER / DISCOUNT POPUP ================= -->
+<button class="discount-bubble" onclick="openDiscount()">💌 Free Discount!</button>
+
+<div id="discount-popup" class="popup-wrapper">
+  <div class="popup-box kawaii-border">
+    <h3>✨ Claim Your 10% Discount ✨</h3>
+    <p>Enter your email to get a sweet sparkly coupon ♡</p>
+    <input type="email" id="discount-email" placeholder="yourname@cute.com">
+    <button class="btn-y2k-big" onclick="submitDiscount()">Claim 💖</button>
+    <button class="close-btn" onclick="closeDiscount()">✦ Close ✦</button>
+  </div>
+</div>
+
+  </div>
+
+</main>
+
+<footer class="footer-y2k">
+  ✧ NeonCam © 2025 ✧
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart ✧ NeonCam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="y2k-bg">
+
+<header class="header-y2k">
+  <h1 class="logo-y2k sparkle-title">🛒 Your Cart ♡</h1>
+  
+  <nav class="nav-bar">
+  <a class="nav-btn" href="index.html">Home ♡</a>
+  <a class="nav-btn" href="products.html">Shop ✧</a>
+  <a class="nav-btn" href="cart.html">Cart 🛒</a>
+  <a class="nav-btn" href="contact.html">Contact 💌</a>
+  <a class="nav-btn" href="about.html">About ✨</a>
+</nav>
+
+</header>
+
+<div class="floating-stars"></div>
+
+<main class="cart-container kawaii-border">
+  <h2>♡ Your Sweet Picks ♡</h2>
+
+  <div id="cart-items"></div>
+
+  <h3 id="total"></h3>
+
+  <button class="btn-y2k-big" onclick="clearCart()">Clear Cart ♡</button>
+  <!-- ================= NEWSLETTER / DISCOUNT POPUP ================= -->
+<button class="discount-bubble" onclick="openDiscount()">💌 Free Discount!</button>
+
+<div id="discount-popup" class="popup-wrapper">
+  <div class="popup-box kawaii-border">
+    <h3>✨ Claim Your 10% Discount ✨</h3>
+    <p>Enter your email to get a sweet sparkly coupon ♡</p>
+    <input type="email" id="discount-email" placeholder="yourname@cute.com">
+    <button class="btn-y2k-big" onclick="submitDiscount()">Claim 💖</button>
+    <button class="close-btn" onclick="closeDiscount()">✦ Close ✦</button>
+  </div>
+</div>
+</main>
+
+<footer class="footer-y2k">✧ NeonCam © 2025 ✧</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
